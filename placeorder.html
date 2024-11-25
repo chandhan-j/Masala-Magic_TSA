@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order | Masala Magic</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;400;600;700;800;900;1000&family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imgs/Masala Magic.png">
+    <meta name="description" content="Place your order with Masala Magic">
+    <meta name="keywords" content="Place Order, Masala Magic, Checkout">
+    <meta name="author" content="Masala Magic">
+
+            <!-- Header -->
+            <header id="header">
+                <div class="container">
+                    <a href="index.html" class="logo"><img src="imgs/Masala Magic.png" alt="Logo"> Masala Magic</a>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html#our_mission" class="nav-a nav-otherL">Our Mission</a></li>
+                            <li><a href="index.html#our_process" class="nav-a">Our Process</a></li>
+                            <li><a href="index.html#Menu" class="nav-a">Our Menu</a></li>
+                            <li><a href="reservation.html" class="nav-a">Reservation</a></li>
+                            <li><a href="checkout.html" class="nav-a"><img src="imgs/ShoppingCart.png" alt=""></a></li>
+                            </li>
+                        <ul>    
+                    </nav>
+                </div>
+            </header> 
+    <!-- Start Main Section -->
+    <main>   
+                <!-- Payment Options -->
+                <div class="payment-options">
+                    <label>Payment Option:</label>
+                    <button class="pay-btn" onclick="handlePaymentMethod('payNow')">Pay Now</button>
+                    <button class="pay-btn" onclick="handlePaymentMethod('payAtStore')">Pay at Store</button>
+                </div>
+                
+                <script>
+                    function handlePaymentMethod(paymentMethod) {
+                        // Check the payment method chosen by the user
+                        if (paymentMethod === "payNow") {
+                            // Redirect to a page where the user can enter their personal details
+                            window.location.href = "personalDetailsForm.html";
+                        } else if (paymentMethod === "payAtStore") {
+                            // Redirect to the thank you page
+                            window.location.href = "thankyoupage.html";
+                        } else {
+                            // Default case if no valid option is selected
+                            alert("Invalid payment option");
+                        }
+                    }
+                </script>
+                
+
+        <style>
+          .payment-options {
+            display: flex;
+            align-items: center;
+        }
+        
+        .payment-options label {
+            margin-right: 10px;
+        }
+        
+        .pay-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .pay-btn:hover {
+            background-color: #0056b3;
+        }
+        
+        </style>
+
+    </body>
+</html>
